@@ -1,81 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html type="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/address_book.css">
-  <title>Address Book App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <script src="../js/home.js"></script>
+  <title>Address Book</title>
 </head>
+
 <body>
-  <header>
-    <div class="header-content">
-      <img src="../assets/logo.png" alt="">
+  <header class="header-content header">
+    <div class="logo-content">
+      <img src="../assets/logo.png" alt="" />
       <div>
-        <span class="address-text">ADDRESS</span><br>
-        <span class="address-text address-book">BOOK</span>
+        <span class="address-text">ADDRESS</span><br />
+        <span class="address-text address-payroll">BOOK</span>
       </div>
-    </div>
-
-    <div class="form-content">
-      <form class="form" id="new-address">
-        <div class="form-head">
-        <div class="form-text-head">PERSON ADDRESSBOOK FORM</div>
-        <div class="form-cancel-icon"><span class="glyphicon glyphicon-remove-circle"></span>
-      </div>
-    </div>
-        <div>
-          <p>
-            <input type="text" placeholder=" " id="fullname" name="fullname" required>
-            <label>Enter Full Name:-</label>
-          </p>
-          <error-output class="fullname-error" for="text"></error-output>
-          <p>
-            <textarea id="address" name="address"></textarea>
-            <label>Enter Address:-</label>
-          </p>
-
-          <div class="row-content">
-
-            <select class="form-control" id="city" name="city" style="size: 30px;">
-              <option value="None">Select City</option>
-              <option value="Banglore">Banglore</option>
-              <option value="Pune">Pune</option>
-              <option value="Mumbai">Mumbai</option>
-              <option value="Delhi">Delhi</option>
-              <option value="Nagpur">Nagpur</option>
-              <option value="Kolkata">Kolkata</option>
-            </select>
-            <error-output class="fullname-error" for="text"></error-output>
-            <select class="form-control" id="state" name="state">
-              <option value="None">Select State</option>
-              <option value="Maharashtra">Maharashtra</option>
-              <option value="Karnataka">Karnataka</option>
-              <option value="Kerala">Kerala</option>
-              <option value="AndhraPradesh">AndhraPradesh</option>
-              <option value="TamilNadu">TamilNadu</option>
-            </select>
-            <p>
-              <input placeholder=" " id="zip" name="zip" required>
-              <label>Enter the Zip Code:-</label>
-            </p>
-          </div>
-          <p>
-            <input placeholder=" " id="phone" name="phone" required>
-            <label>Phone Number :</label>
-          </p>
-          <error-output class="phone-error" for="text"></error-output>
-          <div class="buttonParent">
-            <div class="submit-reset">
-              <button type="submit" class="button submitButton" id="submitButton" data-target="home.html">Submit</button>
-              <button type="reset" class="button submitButton">Reset</button>
-            </div>
-          </div>
-        </div>
-      </form>
     </div>
   </header>
+  <div class="main-content">
+    <div class="address-header-content">
+      <div class="address-detail-text">
+        Person Details
+      </div>
+      <a href="../pages/address_book.html" class="add-button">
+        <img src="../assets/icons/add-24px.svg" alt="" /> Add User</a>
+    </div>
+    <div class="header-content">
+      <table id="display" class="table">
+      </table>
+    </div>
+  </div>
   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
   <script src="/js/scripts.js"></script>
